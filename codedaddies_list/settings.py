@@ -57,7 +57,7 @@ ROOT_URLCONF = 'codedaddies_list.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,9 +78,13 @@ WSGI_APPLICATION = 'codedaddies_list.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'product_development',
+        'USER': 'root',
+        'PASSWORD': 'ckdtnfkds2',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
 }
 
 
@@ -122,4 +126,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
-STATICFILES_DIRS = ["/Users/martinkim/Desktop/GITHUB/codedaddies_list/codedaddies_list/static",]
+STATICFILES_DIRS = [
+    "/Users/martinkim/Desktop/GITHUB/codedaddies_list/codedaddies_list/static", ]
